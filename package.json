@@ -1,7 +1,7 @@
 {
   "name": "english_learn_card",
   "version": "0.1.0",
-  "homepage": "https://SimonKaresz.github.io/englishLearn/",
+  "homepage": "https://simonkaresz.github.io/englishLearn/",
   "private": true,
   "dependencies": {
     "@hookform/resolvers": "^2.9.10",
