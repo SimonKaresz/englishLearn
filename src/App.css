@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@layer base{
+    *{
+        @apply m-0 p-0 box-border
+    }
+
+    html{
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body{
+        @apply bg-zinc-800 w-full h-screen scroll-smooth
+    }
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@layer components{
+    /* header */
+    .sidebarOff{
+        @apply absolute py-5 top-0 grid min-h-screen w-full ease-in-out duration-300 translate-x-[-100%] grid-cols-1 content-between items-start justify-items-start bg-zinc-500/80 text-neutral-200 backdrop-blur-[2px]
+    }
+    .sidebarOn{
+        @apply absolute py-5 top-0 z-50 grid min-h-screen w-full ease-in-out duration-300 translate-x-0 grid-cols-1 content-between items-start justify-items-start bg-zinc-500/80 text-neutral-200 backdrop-blur-[2px]
+    }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+    /* home */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+    .home_nav{
+        @apply relative w-[300px] rounded-xl bg-white/20 py-6 text-center
+    }
 
-.App-link {
-  color: #61dafb;
-}
+    .home_nav::after{
+        @apply absolute -z-10 top-0 right-0 left-0 bottom-0 w-0 border-0 border-green-500 rounded-xl py-6 duration-200 ease-in-out;
+        content: "";
+    }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    .home_nav:hover::after,.home_nav:active::after{
+        @apply absolute top-0 right-0 left-0 bottom-0 w-[300px] border-2 border-green-500 rounded-xl py-6 duration-200 ease-in-out;
+        content: "";
+    }
+
+    /* create */
+
+    .category_selector{
+        @apply mt-12 w-[300px] border cursor-pointer border-green-500 bg-transparent p-2 text-center;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
 }
