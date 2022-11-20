@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/englishLearn/static/css/main.2bbd8507.css",
+    "main.js": "/englishLearn/static/js/main.0d969499.js",
+    "static/media/eng_flag.png": "/englishLearn/static/media/eng_flag.789ff1da7dc0b7ff0220.png",
+    "index.html": "/englishLearn/index.html",
+    "main.2bbd8507.css.map": "/englishLearn/static/css/main.2bbd8507.css.map",
+    "main.0d969499.js.map": "/englishLearn/static/js/main.0d969499.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2bbd8507.css",
+    "static/js/main.0d969499.js"
+  ]
+}
